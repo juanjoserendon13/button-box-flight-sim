@@ -9,6 +9,8 @@
 ### Resources
 1. [Button Box Options](https://github.com/MHeironimus/ArduinoJoystickLibrary/wiki/FAQ)
 2. [Reading several rotary encoders](https://arduino.stackexchange.com/questions/52909/reading-several-rotary-encoders)
+2. [Rotary Encoder - Debouncing](https://www.best-microcontroller-projects.com/rotary-encoder.html)
+4. [Bounce-Free Rotary Encoder](https://www.best-microcontroller-projects.com/rotary-encoder.html)
 
 ### Components Implemented
 
