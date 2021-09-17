@@ -2,8 +2,11 @@
 #include <Joystick.h>
 
 // MAKE THIS BUTTON BOX | 32 FUNCTION w ENCODERS (https://www.youtube.com/watch?v=Z7Sc4MJ8RPM) code by AMSTUDIO (https://www.youtube.com/channel/UCQS1ZB3BVSrBo3tCs7PyfxQ) is licensed under CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/) 
-// / This work "wim_s_button_box_code" (https://drive.google.com/file/d/1dKqA0WRBKmo2w-OuqffqRrVV8e1hs0sM/view) is a derivative of Wim (https://www.youtube.com/channel/UC5tI3LDyFwZEkISuJlUAi4Q) 
+// / This work "wim_s_button_box_code" (https://drive.google.com/file/d/1dKqA0WRBKmo2w-OuqffqRrVV8e1hs0sM/view) is a derivative of Wim (https://www.youtube.com/channel/UC5tI3LDyFwZEkISuJlUAi4Q)
+// / This work "Robust Rotary encoder reading" (https://www.best-microcontroller-projects.com/rotary-encoder.html) is a derivative of John Main (best-microcontroller-projects.com) and is licensed under Copyright
 // / Desaturated from original
+
+//LIST_MAX has a default number of simultaneous buttons pressed
 
 //DEFINITIONS
 #define ENABLE_PULLUPS
@@ -95,7 +98,7 @@ const unsigned char ttable[7][4] = {
 #endif
 
 //BUTTON MATRIX PART 2
-byte rowPins[NUMROWS] = {?,?,?}; //change "?" to the pins the rows of your button matrix are connected to
+byte rowPins[NUMROWS] = {?,?,?,?}; //change "?" to the pins the rows of your button matrix are connected to
 byte colPins[NUMCOLS] = {?,?,?,?}; //change "?" to the pins the rows of your button matrix are connected to
 
 Keypad buttbx = Keypad( makeKeymap(buttons), rowPins, colPins, NUMROWS, NUMCOLS);
@@ -130,13 +133,11 @@ int currentOutputLevel = 0;
 int zAxis_ = 0;
 int RxAxis_ = 0;   
 
-               
 //POTENTIOMETERS  PART 2
 //Which pins are your potentiometers connected to?
 int potentiometerPin1 = ?; //Change "?" to the pin your potentiometer is connected to
 int potentiometerPin2 = ?;
 const bool initAutoSendState = true;
-
 
 void setup() {
   Joystick.begin();
@@ -155,7 +156,7 @@ void loop() {
 }
 
 //POTENTIOMETERS PART 3
-//change the details to match teh details above for each potentiometer you are using
+//change the details to match the details above for each potentiometer you are using
 void CheckAllPotentiometers(){
                            
   //potentiometer 1
@@ -184,7 +185,6 @@ int getAverageOutput(int pinToRead){
   return total / numReadings;
 }
 
-
 void CheckAllButtons(void) {
       if (buttbx.getKeys())
     {
@@ -207,7 +207,6 @@ void CheckAllButtons(void) {
      }
 }
 
-
 void rotary_init() {
   for (int i=0;i<NUMROTARIES;i++) {
     pinMode(rotaries[i].pin1, INPUT);
@@ -218,7 +217,6 @@ void rotary_init() {
     #endif
   }
 }
-
 
 unsigned char rotary_process(int _i) {
   //Serial.print("Processing rotary: ");
