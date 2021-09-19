@@ -2,8 +2,8 @@
 //
 // Copyright John Main - best-microcontroller-projects.com
 //
-#define CLK  2 // D4 in NODEMCU
-#define DATA 0 // D3 in NODEMCU
+#define CLK  2 // 2 Arduino Pin, D4 in NODEMCU
+#define DATA 0 // 0 Arduino Pin, D3 in NODEMCU
 
 void setup() {
   pinMode(CLK, INPUT);
