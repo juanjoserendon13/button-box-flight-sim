@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MobiflightConnector>
+  <outputs />
+  <inputs>
+    <config guid="f33dbcd1-9ce9-4e97-b6b7-6623ff8f50de">
+      <active>true</active>
+      <description>AP_SPD_Nob_MSFS_Events</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="SPD_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_SPD_DEC" />
+          <onLeftFast />
+          <onRight type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_SPD_INC" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="4997b1ce-b6c9-4edf-8f3a-71f292136e5a">
+      <active>false</active>
+      <description>AP_SPD_Nob_FSUIPC_Offset</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="SPD_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07E2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07E2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="ae68abe4-60bd-4dec-9474-1103d20e0f30">
+      <active>true</active>
+      <description>AP_SPD_Selected_Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="SPD_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_SPD_PULL" />
+          <onRelease />
+        </button>
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07E2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07E2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="579ba3f7-2ff8-4e03-93bc-29a43ad94bce">
+      <active>true</active>
+      <description>AP_HDG_Nob_MSFS_Events</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="HDG_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_HDG_DEC" />
+          <onLeftFast />
+          <onRight type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_HDG_INC" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="26c79908-a8cf-4a87-b7a9-b22dab030ee3">
+      <active>false</active>
+      <description>AP_HDG_Nob_FSUIPC_Offset</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="HDG_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07CC" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07CC" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="24a1c78b-4b37-4158-8288-882052445397">
+      <active>true</active>
+      <description>AP_HDG_Selected_Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="HDG_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_HDG_PULL" />
+          <onRelease />
+        </button>
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07CC" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07CC" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="5a61663d-61d0-48a3-b1f7-bce6f6cac5b9">
+      <active>true</active>
+      <description>AP_ALT_Nob_MSFS_Events</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="ALT_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_ALT_DEC" />
+          <onLeftFast />
+          <onRight type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_ALT_INC" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="ea6081b8-101f-4554-9429-f5e36ebd9988">
+      <active>false</active>
+      <description>AP_ALT_Nob_FSUIPC_Offset</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="ALT_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07D4" offsetType="Integer" size="4" mask="0xFFFFFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07D4" offsetType="Integer" size="4" mask="0xFFFFFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="250a8853-087f-4680-96a3-cc0f311497b2">
+      <active>true</active>
+      <description>AP_ALT_Selected_Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="ALT_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_ALT_PULL" />
+          <onRelease />
+        </button>
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07D4" offsetType="Integer" size="4" mask="0xFFFFFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07D4" offsetType="Integer" size="4" mask="0xFFFFFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9d1e325f-aa87-426f-8c9c-151bd77e82d8">
+      <active>true</active>
+      <description>AP_VS_Nob_MSFS_Events</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="VS_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_VS_DEC" />
+          <onLeftFast />
+          <onRight type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_VS_INC" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="4e60624e-01e5-4c4a-b138-ebb9ee2d2b5d">
+      <active>false</active>
+      <description>AP_VS_Nob_FSUIPC_Offset</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="VS_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07F2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07F2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="d879e7d3-677b-4755-90c0-f20f8ed0baed">
+      <active>true</active>
+      <description>AP_VS_Selected_Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="VS_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020EventIdInputAction" eventId="A32NX.FCU_VS_PULL" />
+          <onRelease />
+        </button>
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07F2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07F2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="a2f29f79-337e-4734-adef-388ec8c461c4">
+      <active>true</active>
+      <description>AP_MASTER_Toggle</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="AP_MASTER" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020EventIdInputAction" eventId="AP_MASTER" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9c70e41d-c2e2-4c5d-90c3-f7a317581d81">
+      <active>true</active>
+      <description>Landing_Gear_Switch</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="LANDING_GEAR" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020EventIdInputAction" eventId="GEAR_UP" />
+          <onRelease type="MSFS2020EventIdInputAction" eventId="GEAR_DOWN" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="df5b01f6-4950-435a-931d-a74dea40a03a">
+      <active>true</active>
+      <description>EFIS_Range_CPT_UP</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="EFIS_RANGE_UP" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020EventIdInputAction" eventId="A320_Neo_MFD_Range_1_INC" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="97edf14f-75c4-4030-8b9a-319f80e3c546">
+      <active>true</active>
+      <description>EFIS_Range_CPT_DOWN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="EFIS_RANGE_DOWN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020EventIdInputAction" eventId="A320_Neo_MFD_Range_1_DEC" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+  </inputs>
+</MobiflightConnector>
