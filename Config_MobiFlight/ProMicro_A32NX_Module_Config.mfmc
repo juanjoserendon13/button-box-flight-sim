@@ -11,7 +11,7 @@
   <Encoder Name="VS_Encoder" PinLeft="7" PinRight="6" EncoderType="0" />
   <Button Name="VS_PULL" Pin="18" />
   <Button Name="AP_MASTER" Pin="8" />
-  <Button Name="LANDING_GEAR" Pin="9" />
+  <Button Name="SWITCH_UP_DOWN" Pin="9" />
   <Button Name="EFIS_RANGE_UP" Pin="15" />
   <Button Name="EFIS_RANGE_DOWN" Pin="14" />
 </Config>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MobiflightConnector>
+  <outputs />
+  <inputs>
+    <config guid="3e32c2b4-64fa-4f14-8fe2-716ab25e83d9">
+      <active>true</active>
+      <description>NAV1-OBS-CDI</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.3.2.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="SPD_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:VOR1_OBI_DEC)" presetId="520f3094-04fb-4786-93c9-e725a2e1598e" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:VOR1_OBI_INC)" presetId="5f8975d1-7a9d-4834-af07-946f36319453" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="d5bf5103-8afd-42a6-a293-5dac64febfae">
+      <active>true</active>
+      <description>NAV1-SWAP-PUSH</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.3.2.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="SPD_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:NAV1_RADIO_SWAP)" presetId="72e5dd2a-4e9d-4d61-940a-e523202f8dd0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="138228af-1987-4bcb-9ac1-bc91c8429f12">
+      <active>true</active>
+      <description>NAV2-OBS-CDI</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.3.2.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="HDG_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:VOR2_OBI_DEC)" presetId="99057249-9a87-41af-b8ac-201018d65430" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:VOR2_OBI_INC)" presetId="42d2d62c-4b78-4fe6-8fc6-cb25272ddd8c" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="200219b0-b178-4fa2-9028-7127ac89059e">
+      <active>true</active>
+      <description>NAV2-SWAP-PUSH</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.3.2.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="HDG_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:NAV2_RADIO_SWAP)" presetId="63711aad-e826-4be2-8ee6-b8af7ba92dd8" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="f26a4a6c-eb57-4053-8fb2-617914225188">
+      <active>true</active>
+      <description>ADF-HDG-BEARING</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.3.2.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="VS_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:ADF_CARD_DEC)" presetId="7c7f3203-86c4-49de-8930-376e03c3e2bd" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:ADF_CARD_INC)" presetId="4e6b16de-089f-4f25-9c37-15e3120ea423" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+  </inputs>
+</MobiflightConnector>

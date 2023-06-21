@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MobiflightConnector>
+  <outputs />
+  <inputs>
+    <config guid="f33dbcd1-9ce9-4e97-b6b7-6623ff8f50de">
+      <active>true</active>
+      <description>AP_SPD_Nob_MSFS_Events</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="SPD_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(L:XMLVAR_AirSpeedIsInMach) if{ 1 (&gt;K:AP_MACH_VAR_DEC) } els{ 1 (&gt;K:AP_SPD_VAR_DEC) } (&gt;H:A320_Neo_CDU_AP_DEC_SPEED)" presetId="848b0c96-0631-4de9-810c-9eb5284efd93" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(L:XMLVAR_AirSpeedIsInMach) if{ 1 (&gt;K:AP_MACH_VAR_INC) } els{ 1 (&gt;K:AP_SPD_VAR_INC) } (&gt;H:A320_Neo_CDU_AP_INC_SPEED)" presetId="3dc54b0a-2318-49e6-ab69-943461f1dbda" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="4997b1ce-b6c9-4edf-8f3a-71f292136e5a">
+      <active>false</active>
+      <description>AP_SPD_Nob_FSUIPC_Offset</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="SPD_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07E2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07E2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="ae68abe4-60bd-4dec-9474-1103d20e0f30">
+      <active>false</active>
+      <description>AP_SPD_Selected_Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="SPD_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020EventIdInputAction" eventId="A320_Neo_FCU_SPEED_PULL" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="7624b402-e622-4859-91ea-2a97a2fbafe0">
+      <active>true</active>
+      <description>AP_SPD_Managed_Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="SPD_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:A320_Neo_FCU_SPEED_PUSH)" presetId="2bd97993-0352-4b8f-9295-564398775b57" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="579ba3f7-2ff8-4e03-93bc-29a43ad94bce">
+      <active>true</active>
+      <description>AP_HDG_Nob_MSFS_Events</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="HDG_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:A32NX.FCU_HDG_DEC)" presetId="57db72d2-69b6-4337-beb5-7e42ebe410dc" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:A32NX.FCU_HDG_INC)" presetId="c7363c64-c741-486e-827b-ebc6d4309401" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="26c79908-a8cf-4a87-b7a9-b22dab030ee3">
+      <active>false</active>
+      <description>AP_HDG_Nob_FSUIPC_Offset</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="HDG_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07CC" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07CC" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="24a1c78b-4b37-4158-8288-882052445397">
+      <active>true</active>
+      <description>AP_HDG_Selected_Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="HDG_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:A32NX.FCU_HDG_PULL)" presetId="1f31b6c8-56af-400a-b956-91bffd60d8a6" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="30ec0cab-7db7-4723-a181-4cf5ac096552">
+      <active>false</active>
+      <description>AP_HDG_Managed_Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="HDG_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020EventIdInputAction" eventId="HDG_Push" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="5a61663d-61d0-48a3-b1f7-bce6f6cac5b9">
+      <active>true</active>
+      <description>AP_ALT_Nob_MSFS_Events</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="ALT_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="3 (A:AUTOPILOT ALTITUDE LOCK VAR:3, feet) (L:XMLVAR_Autopilot_Altitude_Increment) - (L:XMLVAR_Autopilot_Altitude_Increment) (A:AUTOPILOT ALTITUDE LOCK VAR:3, feet) (L:XMLVAR_Autopilot_Altitude_Increment) % - (L:XMLVAR_Autopilot_Altitude_Increment) % + 100 max (&gt;K:2:AP_ALT_VAR_SET_ENGLISH) (&gt;H:AP_KNOB_Down) (&gt;H:A320_Neo_CDU_AP_DEC_ALT)" presetId="910760bf-466c-46ca-a0ba-42138e931c29" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="3 (A:AUTOPILOT ALTITUDE LOCK VAR:3, feet) (L:XMLVAR_Autopilot_Altitude_Increment) + (A:AUTOPILOT ALTITUDE LOCK VAR:3, feet) (L:XMLVAR_Autopilot_Altitude_Increment) % - 49000 min (&gt;K:2:AP_ALT_VAR_SET_ENGLISH) (&gt;H:AP_KNOB_Up) (&gt;H:A320_Neo_CDU_AP_INC_ALT)" presetId="e7ee2260-c929-4891-9440-1540b9c45357" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="ea6081b8-101f-4554-9429-f5e36ebd9988">
+      <active>false</active>
+      <description>AP_ALT_Nob_FSUIPC_Offset</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="ALT_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07D4" offsetType="Integer" size="4" mask="0xFFFFFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07D4" offsetType="Integer" size="4" mask="0xFFFFFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="250a8853-087f-4680-96a3-cc0f311497b2">
+      <active>false</active>
+      <description>AP_ALT_Selected_OPEN_CLIMB_Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="ALT_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:A32NX.FCU_ALT_PULL)" presetId="35f4a312-defb-4a06-9b4b-d238eee2ad3e" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="e94fd635-afbe-4d3e-8fa4-bbc90fddec76">
+      <active>true</active>
+      <description>AP_ALT_Selected_CLIMB_Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="ALT_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:A32NX.FCU_ALT_PUSH)" presetId="ba15e7cd-554b-405b-a1c9-7ed9ee404047" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9d1e325f-aa87-426f-8c9c-151bd77e82d8">
+      <active>true</active>
+      <description>AP_VS_Nob_MSFS_Events</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="VS_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:A32NX.FCU_VS_DEC)" presetId="506a38c6-f31b-4a0f-b150-696a25fd0e8e" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:A32NX.FCU_VS_INC)" presetId="38da1ddd-dc66-4e5f-bc28-1e7d9c576ee2" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="4e60624e-01e5-4c4a-b138-ebb9ee2d2b5d">
+      <active>false</active>
+      <description>AP_VS_Nob_FSUIPC_Offset</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="VS_Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07F2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=-32768,32767,$-182)" />
+          </onLeft>
+          <onLeftFast />
+          <onRight type="FsuipcOffsetInputAction">
+            <source type="FSUIPC" offset="0x07F2" offsetType="Integer" size="2" mask="0xFFFF" bcdMode="False" inputValue="if($=32586,-32767,$+182)" />
+          </onRight>
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="d879e7d3-677b-4755-90c0-f20f8ed0baed">
+      <active>true</active>
+      <description>AP_VS_Selected_Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="VS_PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:A32NX.FCU_VS_PULL)" presetId="87c96946-b7ab-4e22-9c10-981e7a0cf353" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="a2f29f79-337e-4734-adef-388ec8c461c4">
+      <active>true</active>
+      <description>AP_MASTER_Toggle</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="AP_MASTER" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:A32NX.FCU_AP_1_PUSH)" presetId="7f471277-ed45-481b-aa59-6a305bc74465" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9c70e41d-c2e2-4c5d-90c3-f7a317581d81">
+      <active>false</active>
+      <description>Landing_Gear_Switch</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="SWITCH_UP_DOWN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020EventIdInputAction" eventId="GEAR_UP" />
+          <onRelease type="MSFS2020EventIdInputAction" eventId="GEAR_DOWN" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="40a513d1-8026-41a6-9f7a-0c43e0802589">
+      <active>true</active>
+      <description>Spoilers_Arm_Switch</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="SWITCH_UP_DOWN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:SPOILERS_ARM_ON)" presetId="8c44445d-4af6-4a94-9693-19f00ca5828b" />
+          <onRelease type="MSFS2020CustomInputAction" command="(&gt;K:SPOILERS_ARM_OFF)" presetId="15a992f1-195c-465a-97ca-7da61a5493f8" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="df5b01f6-4950-435a-931d-a74dea40a03a">
+      <active>true</active>
+      <description>EFIS_Range_CPT_UP</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="EFIS_RANGE_UP" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(L:A320_Neo_MFD_Range_1) 5 &lt; if{ (L:A320_Neo_MFD_Range_1) 1 + (&gt;L:A320_Neo_MFD_Range_1) }" presetId="c724b7c5-fdc7-42ca-bb04-f10f234efc11" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="97edf14f-75c4-4030-8b9a-319f80e3c546">
+      <active>true</active>
+      <description>EFIS_Range_CPT_DOWN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Micro/ SN-cef-d2a" name="EFIS_RANGE_DOWN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(L:A320_Neo_MFD_Range_1) 0 &gt; if{ (L:A320_Neo_MFD_Range_1) 1 - (&gt;L:A320_Neo_MFD_Range_1) }" presetId="0b4980f0-28ab-4125-a757-6019b20cbb0c" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+  </inputs>
+</MobiflightConnector>
